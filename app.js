@@ -1,4 +1,4 @@
-// import "./public/style/app.css";
+// import "/public/style/app.css";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import * as dat from "dat.gui";
@@ -25,48 +25,48 @@ scene.fog = fog;
  */
 const textureLoader = new THREE.TextureLoader();
 
-const doorColorTexture = textureLoader.load("./public/textures/door/color.jpg");
-const doorAlphaTexture = textureLoader.load("./public/textures/door/alpha.jpg");
+const doorColorTexture = textureLoader.load("/public/textures/door/color.jpg");
+const doorAlphaTexture = textureLoader.load("/public/textures/door/alpha.jpg");
 const doorAmbientOcclusionTexture = textureLoader.load(
-  "./public/textures/door/ambientOcclusion.jpg"
+  "/public/textures/door/ambientOcclusion.jpg"
 );
 const doorHeightTexture = textureLoader.load(
-  "./public/textures/door/height.jpg"
+  "/public/textures/door/height.jpg"
 );
 const doorNormalTexture = textureLoader.load(
-  "./public/textures/door/normal.jpg"
+  "/public/textures/door/normal.jpg"
 );
 const doorMetalnessTexture = textureLoader.load(
-  "./public/textures/door/metalness.jpg"
+  "/public/textures/door/metalness.jpg"
 );
 const doorRoughnessTexture = textureLoader.load(
-  "./public/textures/door/roughness.jpg"
+  "/public/textures/door/roughness.jpg"
 );
 
 const bricksColorTexture = textureLoader.load(
-  "./public/textures/bricks/color.jpg"
+  "/public/textures/bricks/color.jpg"
 );
 const bricksAmbientOcclusionTexture = textureLoader.load(
-  "./public/textures/bricks/ambientOcclusion.jpg"
+  "/public/textures/bricks/ambientOcclusion.jpg"
 );
 const bricksNormalTexture = textureLoader.load(
-  "./public/textures/bricks/normal.jpg"
+  "/public/textures/bricks/normal.jpg"
 );
 const bricksRoughnessTexture = textureLoader.load(
-  "./public/textures/bricks/roughness.jpg"
+  "/public/textures/bricks/roughness.jpg"
 );
 
 const grassColorTexture = textureLoader.load(
-  "./public/textures/grass/color.jpg"
+  "/public/textures/grass/color.jpg"
 );
 const grassAmbientOcclusionTexture = textureLoader.load(
-  "./public/textures/grass/ambientOcclusion.jpg"
+  "/public/textures/grass/ambientOcclusion.jpg"
 );
 const grassNormalTexture = textureLoader.load(
-  "./public/textures/grass/normal.jpg"
+  "/public/textures/grass/normal.jpg"
 );
 const grassRoughnessTexture = textureLoader.load(
-  "./public/textures/grass/roughness.jpg"
+  "/public/textures/grass/roughness.jpg"
 );
 
 grassColorTexture.repeat.set(8, 8);
@@ -208,16 +208,16 @@ scene.add(floor);
  */
 // Ambient light
 const ambientLight = new THREE.AmbientLight("#b9d5ff", 0.12);
-gui.add(ambientLight, "intensity").min(0).max(1).step(0.001);
+// gui.add(ambientLight, "intensity").min(0).max(1).step(0.001);
 scene.add(ambientLight);
 
 // Directional light
 const moonLight = new THREE.DirectionalLight("#b9d5ff", 0.12);
 moonLight.position.set(4, 5, -2);
-gui.add(moonLight, "intensity").min(0).max(1).step(0.001);
-gui.add(moonLight.position, "x").min(-5).max(5).step(0.001);
-gui.add(moonLight.position, "y").min(-5).max(5).step(0.001);
-gui.add(moonLight.position, "z").min(-5).max(5).step(0.001);
+// gui.add(moonLight, "intensity").min(0).max(1).step(0.001);
+// gui.add(moonLight.position, "x").min(-5).max(5).step(0.001);
+// gui.add(moonLight.position, "y").min(-5).max(5).step(0.001);
+// gui.add(moonLight.position, "z").min(-5).max(5).step(0.001);
 
 scene.add(moonLight);
 
